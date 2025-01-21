@@ -1,0 +1,12 @@
+{
+  "name": "blr_malls",
+  "version": "1.0.0",
+  "description": "The project points out some of the most popular malls in Bengaluru and shares in detail many insightful and personal experiences. The purpose is to provide potential visitors with basic information about the mall so that they will not be deprived of any fun or attractions while there.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
