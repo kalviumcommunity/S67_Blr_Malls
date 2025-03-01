@@ -2,6 +2,8 @@ const express=require('express')
 const app=require('express')();
 const connectDB = require('./src/database/db')
 const mallRouter = require('./src/Controllers/Mall')
+const cors = require('cors')
+app.use(cors())
 
 require('dotenv').config({
     path:'./src/Config/.env'
