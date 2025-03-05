@@ -15,4 +15,4 @@ The project points out some of the most popular malls in Bengaluru and shares in
 This project serves as a practical opportunity to transition from frontend web development to mastering backend development and database management. The idea for this project came out of the enthusiasm for combining technical skills with a fun and engaging concept that resonates with people visiting Bengaluru...
 
 ## Deployment Link
-https://blrmalls.palanisamyniranjan69.workers.dev/
+https://blrmalls.palanisamyniranjan69.workers.dev/ 
