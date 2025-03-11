@@ -1,6 +1,8 @@
+import NavBar from "../Components/NavBar";
 function About() {
   return (
     <>
+    <NavBar></NavBar>
     <h1>Bengaluru Malls </h1>
       <br />
       <h2>About</h2>

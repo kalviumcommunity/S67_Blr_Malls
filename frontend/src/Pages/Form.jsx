@@ -1,5 +1,6 @@
 import {useState,useEffect} from 'react'
 import axios from 'axios'
+import NavBar from '../Components/NavBar';
 import { useNavigate } from 'react-router-dom';
 
 const Form = () => {
@@ -25,6 +26,8 @@ const Form = () => {
     }
 
     return (
+        <>
+        <NavBar></NavBar>
         <div className="flex items-center justify-items-center justify-center min-w-screen min-h-screen bg-wheat">
             <div className="flex flex-col bg-white text-black p-6 rounded-lg shadow-lg w-96">
                 <h1 className="text-center text-xl font-bold mb-4">Add Mall</h1>
@@ -51,6 +54,7 @@ const Form = () => {
                 </form>
             </div>
         </div>
+        </>
     );
 };
 

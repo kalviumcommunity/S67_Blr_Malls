@@ -18,9 +18,9 @@ mallRouter.post('/create',async (req,res)=>{
     return res.status(200).json({message:"Record created successfully."})
 })
 
-mallRouter.get('/malls/:name',async (req,res)=>{
-    try{const {name}=req.params;
-    const existMall=await mallModel.findOne({name:name});
+mallRouter.get('/malls/:id',async (req,res)=>{
+    try{const {id}=req.params;
+    const existMall=await mallModel.findOne({_id:id});
     if (!existMall){
         res.status(400).json({message:"Mall not found"})
     }
@@ -38,9 +38,9 @@ mallRouter.get('/malls',async (req,res)=>{
     }
 })
 
-mallRouter.put('/update/:mall',async (req,res)=>{
-    try{const {mall}=req.params;
-    const existMall=await mallModel.findOne({name:mall});
+mallRouter.put('/update/:id',async (req,res)=>{
+    try{const {id}=req.params;
+    const existMall=await mallModel.findOne({_id:id});
     const {name,location} = req.body;
     if (!existMall){
         res.status(400).json({message:"Mall not found."})
@@ -53,10 +53,10 @@ mallRouter.put('/update/:mall',async (req,res)=>{
     }
 })
 
-mallRouter.delete('/delete/:mall',async (req,res)=>{
+mallRouter.delete('/delete/:id',async (req,res)=>{
     try{
-    const {mall}=req.params;
-    const existMall=await mallModel.findOne({name:mall});
+    const {id}=req.params;
+    const existMall=await mallModel.findOne({_id:id});
 
     if (!existMall){
         res.status(400).json({message:"Mall not found."})
