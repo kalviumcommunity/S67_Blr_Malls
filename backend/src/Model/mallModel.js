@@ -1,4 +1,4 @@
-const {Schema, model} = require('mongoose')
+const {Schema, model, default: mongoose} = require('mongoose')
 
 const MallSchema = new Schema({
     name:{
@@ -7,7 +7,12 @@ const MallSchema = new Schema({
     },
     location:{
         type:String
-    }
+    },
+    created_by:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'User',
+        required:true
+    },
 },{
     timestamps:true
 })

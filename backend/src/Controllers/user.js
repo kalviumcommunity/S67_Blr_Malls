@@ -1,6 +1,7 @@
 const {Router}= require("express");
 const userModel = require("../Model/userModel");
 const {upload} = require("../../multer");
+const mallModel = require("../Model/mallModel");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const path = require("path");
@@ -70,5 +71,26 @@ userRouter.post("/login", async(req,res)=>{
     }
 });
 
+userRouter.get("/get-users", async(req,res)=>{
+    try{
+        const users = await userModel.find();
+        return res.status(200).json({users:users});
+    }
+    catch(err){
+        console.error("Get users error:", err.message, err.stack);
+        return res.status(500).json({ error: "Internal server error" });
+    }
+});
 
+userRouter.get("/get-entities/:id", async(req,res)=>{
+    try{
+        const id = req.params.id;
+        const entities= await mallModel.find({createdBy:id});
+        return res.status(200).json({entities:entities});
+    }
+    catch(err){
+        console.error("Get entities error:", err.message, err.stack);
+        return res.status(500).json({ error: "Internal server error" });
+    }
+});
 module.exports = userRouter;

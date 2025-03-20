@@ -5,6 +5,7 @@ import Homepage from './Pages/Homepage'
 import Form from './Pages/Form'
 import UpdateForm from './Pages/UpdateForm'
 import Login from './Pages/Login'
+import CreatedBy from './Pages/CreatedBy'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path='add-mall' element={<Form />}></Route>
         <Route path='update' element={<UpdateForm />}></Route>
         <Route path='/login' element={<Login />}></Route>
+        <Route path='/created-by' element={<CreatedBy />}></Route>
       </Routes>
     </>
   )
