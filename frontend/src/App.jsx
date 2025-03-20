@@ -4,6 +4,7 @@ import About from './Pages/About'
 import Homepage from './Pages/Homepage'
 import Form from './Pages/Form'
 import UpdateForm from './Pages/UpdateForm'
+import Login from './Pages/Login'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path='/' element={<Homepage />}></Route>
         <Route path='add-mall' element={<Form />}></Route>
         <Route path='update' element={<UpdateForm />}></Route>
+        <Route path='/login' element={<Login />}></Route>
       </Routes>
     </>
   )

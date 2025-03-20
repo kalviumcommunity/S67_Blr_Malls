@@ -2,6 +2,8 @@ const express=require('express')
 const app=require('express')();
 const connectDB = require('./src/database/db')
 const mallRouter = require('./src/Controllers/Mall')
+const path = require('path')
+const userRouter = require('./src/Controllers/user')
 const cors = require('cors')
 app.use(cors())
 
@@ -25,3 +27,5 @@ app.get('/ping',(req,res)=>{
 app.use(express.json())
 
 app.use('/',mallRouter)
+
+app.use('/auth',userRouter)
